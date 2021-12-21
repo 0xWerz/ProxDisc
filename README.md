@@ -18,5 +18,5 @@ Discord Bot for scraping proxies in your discord Chat.
 7. Create new monitor 
 8. select HTTP type
 9. name it 
-10. Paste the URl you copied
+10. Paste the URL you copied
 11. Click "Create monitor" at the bottom.
