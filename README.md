@@ -2,7 +2,7 @@
 Discord Bot for scraping proxies in your discord Chat.
 # Getting Started
 1. pip install -r requirements.txt
-2. open "scraper.py" edit the last line with your BOT token.
+2. open "main.py" edit the last line with your BOT token.
 3. run it.
 # Preview
   ![alt text](https://i.ibb.co/BfZmzdW/Screenshot-2021-12-21-103914.png)
