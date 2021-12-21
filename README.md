@@ -12,11 +12,12 @@ Discord Bot for scraping proxies in your discord Chat.
 1. login replit website
 2. import the repository there.
 3. run it 
+4. 
 ![alt text](https://i.ibb.co/C15XTsn/Screenshot-2021-12-21-103710.png)
-4. copy the URL.
-5. login on UptimeRobot Website
-6. Create new monitor 
-7. select HTTP type
-8. name it 
-9. Paste the URl you copied
-10. Click "Create monitor" at the bottom.
+5. copy the URL.
+6. login on UptimeRobot Website
+7. Create new monitor 
+8. select HTTP type
+9. name it 
+10. Paste the URl you copied
+11. Click "Create monitor" at the bottom.
