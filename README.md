@@ -12,6 +12,7 @@ Discord Bot for scraping proxies in your discord Chat.
 1. login replit website
 2. import the repository there.
 3. run it 
-4. ![alt text](https://i.ibb.co/C15XTsn/Screenshot-2021-12-21-103710.png)
+4. 
+![alt text](https://i.ibb.co/C15XTsn/Screenshot-2021-12-21-103710.png)
 
 
