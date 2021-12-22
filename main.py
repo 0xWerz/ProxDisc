@@ -35,7 +35,7 @@ async def proxy(ctx, arg1 = None):
     f.close()
     await ctx.send(file=discord.File('./proxies.txt'))
     
-    keep_alive()
+   keep_alive()
 
     
 client.run('YOUR DISCORD BOT TOKEN')
