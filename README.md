@@ -22,3 +22,6 @@ Discord Bot for scraping proxies in your discord Chat.
 11. Click "Create monitor" at the bottom.
 # Infos
 proxies Scarped from https://proxyscrape.com/.
+# Libraries:
+- Flask
+- Discord
