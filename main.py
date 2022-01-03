@@ -23,7 +23,7 @@ async def proxy(ctx, prxy = None):
     scraped = 0
     f = open("proxies.txt", "a+")
     f.truncate(0)
-    r = requests.get(f'https://api.proxyscrape.com/?request=displayproxies&proxytype={arg1}&timeout=1500&ssl=yes')
+    r = requests.get(f'https://api.proxyscrape.com/?request=displayproxies&proxytype={arg1}')
     proxies = []
     for proxy in r.text.split('\n'):
         proxy = proxy.strip()
