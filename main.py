@@ -17,13 +17,13 @@ async def on_ready():
 @client.command()
 async def proxy(ctx, prxy = None):
     if prxy == None:
-        em = discord.Embed(Title="Usage", description="-proxy [socks4 / socks5 / http ]")
+        em = discord.Embed(Title="Usage", description="$proxy [socks4 / socks5 / http ]")
         await ctx.send(embed=em)
         return
     scraped = 0
     f = open("proxies.txt", "a+")
     f.truncate(0)
-    r = requests.get(f'https://api.proxyscrape.com/?request=displayproxies&proxytype={arg1}')
+    r = requests.get(f'https://api.proxyscrape.com/?request=displayproxies&proxytype={prxy}')
     proxies = []
     for proxy in r.text.split('\n'):
         proxy = proxy.strip()
