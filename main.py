@@ -5,7 +5,7 @@ from discord.ext import commands
 from webserver import keep_alive
 
    
-client = commands.Bot(command_prefix="-", help_command=None)
+client = commands.Bot(command_prefix="$", help_command=None)
 
 @client.event
 async def on_ready():
@@ -15,8 +15,8 @@ async def on_ready():
         
         
 @client.command()
-async def proxy(ctx, arg1 = None):
-    if arg1 == None:
+async def proxy(ctx, prxy = None):
+    if prxy == None:
         em = discord.Embed(Title="Usage", description="-proxy [socks4 / socks5 / http ]")
         await ctx.send(embed=em)
         return
