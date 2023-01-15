@@ -4,22 +4,26 @@ import requests
 from discord.ext import commands
 from webserver import keep_alive
 
-   
-client = commands.Bot(command_prefix="$", help_command=None)
+intents = discord.Intents().all()
+client = commands.Bot(command_prefix="$", help_command=None, intents=intents)
 
 @client.event
 async def on_ready():
-
     print("Bot ready")
 
-        
-        
+
 @client.command()
-async def proxy(ctx, prxy = None):
-    if prxy == None:
-        em = discord.Embed(Title="Usage", description="$proxy [socks4 / socks5 / http ]")
+async def proxy(ctx, prxy=None, limit=None):
+    if prxy is None:
+        em = discord.Embed(title="Usage", description="$proxy [socks4 / socks5 / http] [limit]")
         await ctx.send(embed=em)
         return
+    
+    if limit is None:
+        limit = 10
+    else:
+        limit = int(limit)
+
     scraped = 0
     f = open("proxies.txt", "a+")
     f.truncate(0)
@@ -29,13 +33,14 @@ async def proxy(ctx, prxy = None):
         proxy = proxy.strip()
         if proxy:
             proxies.append(proxy)
-    for p in proxies:
+    for p in proxies[:limit]:
         scraped = scraped + 1 
         f.write((p)+"\n")
     f.close()
-    await ctx.send(file=discord.File('./proxies.txt'))
     
-   keep_alive()
-
+    em = discord.Embed(title=f"Scraped Proxies", description=f"Scraped {scraped} {prxy} proxies.")
+    await ctx.send(file=discord.File('./proxies.txt'), embed=em)
     
-client.run('YOUR DISCORD BOT TOKEN')
+token = input('Enter your Discord Bot token: ')
+keep_alive()    
+client.run(token)

@@ -1,4 +1,3 @@
 discord
 requests
-flask 
-webserver 
+flask  
